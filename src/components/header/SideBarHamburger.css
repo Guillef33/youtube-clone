@@ -1,0 +1,78 @@
+.hamb-container {
+  text-align: end;
+    padding: 0px 0px 0px 0px;   
+}
+
+.hamburger-button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  width: 1.5em;
+  height: 2em;
+  position: relative;
+  z-index: 10;
+  background-color: transparent;
+  background-image: url(https://res.cloudinary.com/dnpyq0ocz/image/upload/v1588441892/icon-hamburger.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+.open {
+    background-image: url(https://res.cloudinary.com/dnpyq0ocz/image/upload/v1588441892/icon-hamburger-close.svg);
+    background-repeat: no-repeat;
+  }
+
+
+.panel {
+  /* max-width: 500px;
+  background-color: #455073;
+  background-size: 117px 188px;
+  /* transition: all 0.4s cubic-bezier(0.42, 0, 0.34, 1.01); */
+  /* transition: all 0.8s ease; */
+  /* position: fixed;
+  z-index: 5; */
+  /* right: -100%; */
+  /* top: 0;
+  height: 100%;
+  width: 100%;
+  visibility: hidden; */
+  /* opacity: 0; */
+  /* padding: 3em;
+  display: flex; */
+      background-color: #282c34;
+    display: flex;
+    flex-direction: column;
+     visibility: hidden; 
+} 
+
+.abierto {
+    visibility: visible;
+    /* width: 100%; */
+    right: 0;
+    opacity: 1;
+  }
+
+
+.panel ul {
+  margin: auto 0 auto auto;
+}
+
+.panel li {
+    list-style: none;
+    font-size: 2em;
+    text-align: right;
+    margin-top: 1em;
+}
+
+.panel  a {
+      text-decoration: none;
+      color: white;
+  }
+.panel  a:hover {
+        color: #7a6ffb;
+    }
+
+

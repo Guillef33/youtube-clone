@@ -1,0 +1,19 @@
+.sidebar-container {
+    /* height: 100vh; */
+    background-color: #232323;
+    display: flex;
+    flex-direction: column;
+        color: white;
+}
+
+.sidebar-container ul {
+    list-style: none;
+    text-align: left;
+}
+
+@media screen and (max-width: 600px) { 
+  .sidebar-container {
+  display: none;
+}
+}
+  
