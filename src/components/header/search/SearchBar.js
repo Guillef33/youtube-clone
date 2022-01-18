@@ -21,12 +21,13 @@ function SearchBar({ searchValue, setSearchValue, data, placeholder }) {
         options={data}
         getOptionLabel={(option) => option.title}
         className="SearchBar"
+        onChange={onSearchValueChange}
         renderInput={(params) => (
           <TextField
             {...params}
             label="limitTags"
             placeholder={placeholder}
-            autoFocus="true"
+            autoFocus={true}
           />
         )}
       ></Autocomplete>
