@@ -1,6 +1,6 @@
 import React from "react";
 import './Sidebar.css'
-import '../header/SideBarHamburger.css'
+import '../header/hamburger/SideBarHamburger.css'
 import {
   BrowserRouter as Router,
   Switch,

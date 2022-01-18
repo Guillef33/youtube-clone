@@ -1,8 +1,8 @@
 import React, { useState} from 'react'
-import Logo from "../components/header/Logo";
-import Hamburger from "../components/header/SideBarHamburger";
-import SearchBar from "../components/header/SearchBar";
-import Profile from "../components/header/Profile";
+import Logo from "../components/header/logo/Logo";
+import Hamburger from "../components/header/hamburger/SideBarHamburger";
+import SearchBar from "../components/header/search/SearchBar";
+import Profile from "../components/header/profile/Profile";
 
 import Body from "../components/body/Body";
 import Portfolio from "../components/movies/Portfolio";
@@ -30,13 +30,15 @@ const Home = () => {
     return (
       <div className="App">
         <header className="App-header">
-          <div className='menu-logo-section'>
+          <div className="menu-logo-section">
             <Hamburger />
             <Logo />
           </div>
           <SearchBar
             searchValue={searchValue}
             setSearchValue={setSearchValue}
+            data={projects}
+            placeholder='Search Here...'
           />
           <Profile />
         </header>
