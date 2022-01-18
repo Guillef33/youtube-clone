@@ -1,11 +1,10 @@
 import React from "react";
 import "./SearchBar.css";
-import { Autocomplete, TextField } from '@mui/material';
+import { Autocomplete, TextField } from "@mui/material";
+// import SearchIcon from "@mui/icons-material";
 // import Data from '../../movies/projects';
 
-
 import { FaSearch } from "react-icons/fa";
-
 
 function SearchBar({ searchValue, setSearchValue, data, placeholder }) {
   // const [searchValue, setSearchValue] = React.useState('');
@@ -21,20 +20,28 @@ function SearchBar({ searchValue, setSearchValue, data, placeholder }) {
         id="combo-box-demo"
         options={data}
         getOptionLabel={(option) => option.title}
+        className="SearchBar"
         renderInput={(params) => (
-          <TextField {...params} label="limitTags" placeholder={placeholder} autoFocus='true'  />
+          <TextField
+            {...params}
+            label="limitTags"
+            placeholder={placeholder}
+            autoFocus="true"
+          />
         )}
       ></Autocomplete>
+      {/* <button>
+        <FaSearch />
+      </button> */}
+      {/* <SearchIcon /> */}
 
-      <input
+      {/* <input
         className="SearchBar"
         onChange={onSearchValueChange}
         placeholder="Buscar"
         value={searchValue}
       />
-      <button>
-        <FaSearch />
-      </button>
+*/}
     </div>
   );
 }
