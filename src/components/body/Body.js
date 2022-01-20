@@ -1,6 +1,5 @@
 import { MenuList } from '@mui/material';
 import React from 'react';
-
 import MovieList from "../movies/MovieList";
 import SideBar from "../sidebar/Sidebar";
 

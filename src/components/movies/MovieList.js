@@ -11,6 +11,8 @@ import items from "./projects.js";
 
 import './portfolio.css'
 
+  //Get all the value of the cateogies prop
+
   const allCategories = ["all", ...new Set(items.map((item) => item.category))];
   const allTechnologies = [
     "all",
@@ -18,9 +20,7 @@ import './portfolio.css'
   ];
 
 
-const MovieList = () => {
-  //Get all the value of the cateogies prop
-
+const MovieList = ( ) => {
 
   const [movieItems, setMovieItems] = useState(items);
   const [categories, setCategories] = useState(allCategories);
@@ -37,7 +37,9 @@ const MovieList = () => {
 
   return (
     <div className="movielist-section">
+      
       <Categories technology={technology} filterItems={filterItems} />
+
       <section className="section-center">
         {items.map((project) => (
           <Movie
