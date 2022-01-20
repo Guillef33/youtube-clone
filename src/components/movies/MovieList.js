@@ -37,7 +37,7 @@ const MovieList = ( ) => {
 
   return (
     <div className="movielist-section">
-      
+
       <Categories technology={technology} filterItems={filterItems} />
 
       <section className="section-center">

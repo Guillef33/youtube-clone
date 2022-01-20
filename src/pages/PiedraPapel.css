@@ -1,0 +1,11 @@
+.option-selector {
+    display: flex;
+    width: 100%;
+    overflow-x: hidden;
+    padding: 30px;
+    margin: auto;
+}
+
+.option-selector img {
+    width: 400px;
+}
