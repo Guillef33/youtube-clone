@@ -7,7 +7,8 @@ import {
 } from "react-router-dom";
 import Movie from "./Movie";
 
-const Menu = ({ items }) => {
+const MovieList = ({ items }) => {
+  
 
   return (
     <section className="section-center">
@@ -29,4 +30,4 @@ const Menu = ({ items }) => {
   );
 };
 
-export default Menu;
+export default MovieList;

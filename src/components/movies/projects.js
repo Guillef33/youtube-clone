@@ -1,12 +1,12 @@
 // Constants
 
-import BuscaTuCoach from './buscatucoach.jpg';
-import FJComms from "./fjcomms.jpg";
-import Iniciativa from "./iniciativa.jpg";
-import Ecospend from "./ecospend.jpg";
-import MareFish from "./marefish.jpg";
-import Audience from "./audience.jpg";
-import Auditorbot from './auditorbot.jpg'
+import BuscaTuCoach from './img/buscatucoach.jpg';
+import FJComms from "./img/fjcomms.jpg";
+import Iniciativa from "./img/iniciativa.jpg";
+import Ecospend from "./img/ecospend.jpg";
+import MareFish from "./img/marefish.jpg";
+import Audience from "./img/audience.jpg";
+import Auditorbot from './img/auditorbot.jpg'
 
 
 const projects = [

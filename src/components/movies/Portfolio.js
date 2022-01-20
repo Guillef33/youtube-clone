@@ -16,7 +16,6 @@ function App() {
   const [categories, setCategories] = useState(allCategories);
   const [technology, setTechnology] = useState(allTechnologies);
 
-
   const filterItems = (technology) => {
     if (technology === "all") {
       setMenuItems(items);

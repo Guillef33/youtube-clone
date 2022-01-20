@@ -10,8 +10,11 @@ function SearchBar({ searchValue, setSearchValue, data, placeholder }) {
   // const [searchValue, setSearchValue] = React.useState('');
 
   const onSearchValueChange = (event) => {
-    console.log(event.target.value);
-    setSearchValue(event.target.value);
+    const Movie = event.target.textContent;
+    // console.log(event.target.value);
+    setSearchValue(event.target.textContent);
+    console.log(Movie)
+    return Movie;
   };
 
   return (
