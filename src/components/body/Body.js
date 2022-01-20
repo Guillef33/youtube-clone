@@ -1,15 +1,14 @@
+import { MenuList } from '@mui/material';
 import React from 'react';
 
-import './Body.css'
-
-import Portfolio from '../movies/Portfolio'
+import MovieList from "../movies/MovieList";
 import SideBar from "../sidebar/Sidebar";
 
 const Body = ({ isOpen, setOpen }) => {
   return (
     <div className="body-container">
       <SideBar isOpen={isOpen} setOpen={setOpen} />
-      <Portfolio />
+      <MovieList />
     </div>
   );
 };

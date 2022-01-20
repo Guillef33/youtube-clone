@@ -18,3 +18,16 @@
 .App-link {
   color: #61dafb;
 }
+
+.body-container {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+
+@media screen and (max-width: 600px) { 
+.body-container {
+    grid-template-columns: 1fr;
+}
+
+}
+  

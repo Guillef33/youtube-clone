@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,700;1,700&display=swap');
 
-.portfolio-section {
+.movielist-section {
   padding: 0px 50px;
   background-color: #181818;
 }
 
-.portfolio-section .title {
+.movielist-section .title {
   text-align: center;
   color: whitesmoke;
   font-size: 3em;
@@ -13,14 +13,14 @@
   font-weight: 400;
 }
 
-.portfolio-description {
+.movielist-description {
   color: whitesmoke;
   font-size: 1em;
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 300;
 }
 
-.portfolio-section a {
+.movielist-section a {
   text-decoration: none;
   /* color: #455073; */
   color: whitesmoke;

@@ -5,9 +5,10 @@ import SearchBar from "../components/header/search/SearchBar";
 import Profile from "../components/header/profile/Profile";
 
 import Body from "../components/body/Body";
-import Portfolio from "../components/movies/Portfolio";
+// import Portfolio from "../components/movies/Portfolio";
 import projects from "../components/movies/projects";
 import './Home.css'
+import MovieList from '../components/movies/MovieList';
 
 const Home = () => {
 
