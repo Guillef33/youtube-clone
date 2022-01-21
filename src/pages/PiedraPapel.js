@@ -7,95 +7,91 @@ import tijeraImg from "../assets/images/juego/tijera.jpg";
 import "./PiedraPapel.css";
 
 const PiedraPapel = () => {
+  const posibilidades = ["Piedra", "Papel", "Tijera"];
   const [jugador, setJugador] = useState();
-  const [piedra, setPiedra] = useState();
-  const [papel, setPapel] = useState();
-  const [tijera, setTijera] = useState();
-
-  // const resultadoGlobal = 'Piedra';
   const [resultado, setResultado] = useState();
+  // const [piedra, setPiedra] = useState();
+  // const [papel, setPapel] = useState();
+  // const [tijera, setTijera] = useState();
 
-  function getTijera() {
-    let tijera = "tijera";
-    // let tijera = document.getElementById('tijera')
-    // console.log(tijera)
-    setJugador(tijera);
-    // console.log(tijera)
+  const papelImagen = document.getElementById("papel");
+  const piedraImagen = document.getElementById("piedra");
+
+  const getImageName = () => {
+    if (jugador === "Piedra") {
+      console.log("Hiciste clic en piedra");
+    } else if (jugador === "Tijera") {
+      console.log("Hiciste clic en tijera");
+    } else if (jugador === "Papel") {
+      console.log("Hiciste clic en papel");
+    }
+  };
+
+  getImageName();
+
+  const juegoComputadora = Math.floor(Math.random() * posibilidades.length);
+
+  let computador = posibilidades[juegoComputadora];
+
+  function jugar() {
+    if (
+      (jugador === "Piedra" && computador === "Piedra") ||
+      (jugador === "Papel" && computador === "Papel") ||
+      (jugador === "Tijera" && computador === "Tijera")
+    ) {
+      console.log("Empate");
+      setResultado("Empate");
+    } else if (
+      (jugador === "Piedra" && computador === "Tijera") ||
+      (jugador === "Tijera" && computador === "Papel")
+    ) {
+      setResultado("Gana Jugador");
+    } else if (
+      (jugador === "Piedra" && computador === "Papel") ||
+      (jugador === "Tijera" && computador === "Piedra") ||
+      (jugador === "Papel" && computador === "Tijera")
+    ) {
+      setResultado("Gana Computador");
+    } else {
+      console.log(
+        `Este resultado no lo tengo, jugador eligio ${jugador} y computadora eligio ${computador}`
+      );
+    }
   }
-
-  function getPiedra() {
-    let piedra = "Piedra";
-    setJugador(piedra);
-  }
-
-  function getPapel() {
-    let papel = "Papel";
-    setJugador(papel);
-  }
-     let computador;
-
-
-
-//   function PiedraPapelTijera(jugador, computador) {
-//     // Piedra
-//     if (jugador === "Piedra" && computador === "Tijera") {
-//       setResultado("Ganaste. Piedra rompe la tijera");
-//       console.log("Ganaste. Piedra rompe la tijera");
-//     } else if (jugador === "Piedra" && computador === "Papel") {
-//       setResultado("Perdiste. Papel envuelve a la piedra");
-//     } else if (jugador === "Piedra" && computador === "Piedra") {
-//       setResultado(`Elegiimos la misma ${piedra}, juguemos de nuevo"`);
-//     }
-//     // Tijera
-//     else if (jugador === "Tijera" && computador === "Papel") {
-//       setResultado("Ganaste. Tijera corta el papel.");
-//     } else if (jugador === "Tijera" && computador === "Piedra") {
-//       setResultado("Perdiste. Piedra rompe la tijera.");
-//     } else if (jugador === "Tijera" && computador === "Tijera") {
-//       setResultado("Lo mismo, juguemos de nuevo");
-//     }
-//     // Papel
-//     else if (jugador === "Papel" && computador === "Piedra") {
-//       setResultado("Ganaste. Papel envuelve a la piedra");
-//     } else if (jugador === "Papel" && computador === "Tijera") {
-//       setResultado("Perdiste. Tijera corta el papel");
-//     } else if (jugador === "Papel" && computador === "Papel") {
-//       setResultado("Lo mismo, juguemos de nuevo");
-//     } else {
-//       console.log("Me falta hacer esto");
-//     }
-//   }
-
-//   let nuevoResultado = PiedraPapelTijera(jugador, computador);
 
   return (
     <>
       <h2>Piedra, papel y tijera</h2>
-      <p>Haz clic en las imagenes y elije</p>
-      <div className="option-selector">
-        <img
-          src={piedraImg}
-          alt="piedra"
-          id="piedra"
-          onClick={() => getPiedra()}
-        />
-        <img
-          src={papelImg}
-          alt="piedra"
-          id="papel"
-          onClick={() => getPapel()}
-        />
-        <img
-          src={tijeraImg}
-          alt="piedra"
-          id="tijera"
-          onClick={() => getTijera()}
-        />
+      <div className="game-container">
+        <div className="box-resultados">
+          <p>Elegiste: {jugador}</p>
+          <p>La computadora eligio: {computador}</p>
+          <p>El resultado fue {resultado}</p>
+          <button type="button" onClick={jugar}>
+            Jugar
+          </button>
+        </div>
+        <div className="image-container">
+          <img
+            src={piedraImg}
+            alt="piedra"
+            id="piedra"
+            onClick={(e) => setJugador("Piedra")}
+          />
+          <img
+            src={papelImg}
+            alt="papel"
+            id="papel"
+            onClick={(e) => setJugador("Papel")}
+          />
+          <img
+            src={tijeraImg}
+            alt="tijera"
+            id="tijera"
+            onClick={(e) => setJugador("Tijera")}
+          />
+        </div>
       </div>
-      <p>Elegiste: {jugador}</p>
-      <p>La computadora eligio: {computador}</p>;
-      <button type="button">Jugar</button>
-      {/* <p>Elegiste: {nuevoResultado}</p> */}
     </>
   );
 };

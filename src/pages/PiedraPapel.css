@@ -1,11 +1,30 @@
-.option-selector {
-    display: flex;
-    width: 100%;
+.game-container {
+    overflow-x: hidden;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr; */
+    /* width: 100%;
     overflow-x: hidden;
     padding: 30px;
     margin: auto;
+    justify-content: center; */
 }
 
-.option-selector img {
-    width: 400px;
+/* .game-container img {
+    width: 300px;
+} */
+
+.image-container {
+    display: flex;
+    justify-content: center;
+}
+
+.image-container img {
+    width: 340px;
+}
+.box-resultados {
+    background-color: blueviolet;
+    color: whitesmoke;
+    font-weight: 700;
+    width: 100%;
+    padding:30px;
 }
